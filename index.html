@@ -1,87 +1,95 @@
 <html>
 <head>
   <title> OVT Stundu Saraksts </title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <link rel="stylesheet" href="pure-css-select-style.css">
 </head>
-<select id="ddlViewBy" onchange="imgcreator()">
-  <option value="1">1MT</option>
-  <option value="2">1MO</option>
-  <option value="3">1MH</option>
-  <option value="4">1MG/1ND</option>
-  <option value="5">1DT-1</option>
-  <option value="6">1DT-2</option>
-  <option value="7">1ET</option>
-  <option value="8">1GR</option>
-  <option value="9">1KL</option>
-  <option value="10">1EP</option>
-  <option value="11">1VP</option>
-  <option value="12">1ID</option>
-  <option value="13">1VD</option>
-  <option value="14">1VO</option>
-  <option value="15">1MD-1</option>
-  <option value="16">1MD-2</option>
-  <option value="17">2MT</option>
-  <option value="18">2MO</option>
-  <option value="19">2MH</option>
-  <option value="20">2MG</option>
-  <option value="21">2DT</option>
-  <option value="22">2ET</option>
-  <option value="23">2GR</option>
-  <option value="24">2KL</option>
-  <option value="25">2EP-1</option>
-  <option value="26">2EP-2</option>
-  <option value="27">2VP</option>
-  <option value="28">2VD</option>
-  <option value="29">2VO</option>
-  <option value="30">2MD</option>
-  <option value="31">3MT</option>
-  <option value="32">3MO</option>
-  <option value="33">3MH</option>
-  <option value="34">3MG</option>
-  <option value="35">3ND</option>
-  <option value="36">3DT</option>
-  <option value="37">3ET</option>
-  <option value="38">3GR</option>
-  <option value="39">3KL</option>
-  <option value="40">3EP</option>
-  <option value="41">3VP</option>
-  <option value="42">3ID</option>
-  <option value="43">3RD</option>
-  <option value="44">3MD</option>
-  <option value="45">3VO</option>
-  <option value="46">4MT</option>
-  <option value="47">4MO</option>
-  <option value="48">4MH</option>
-  <option value="49">4MG</option>
-  <option value="50">4ND</option>
-  <option value="51">4DT</option>
-  <option value="52">4ET</option>
-  <option value="53">4GR</option>
-  <option value="54">4KL</option>
-  <option value="55">4EP</option>
-  <option value="56">4VP</option>
-  <option value="57">4ID</option>
-  <option value="58">4RD</option>
-  <option value="59">4MD</option>
-  <option value="60">4AD</option>
-  <option value="61">4VO</option>
-  <option value="62">1MOv</option>
-  <option value="63">1DTv</option>
-  <option value="64">2MOv</option>
-  <option value="65">2DTv</option>
+<body>
+<div class="pure-css-select-style theme-default">
+  <select id="ddlViewBy" onchange="imgcreator()">
+    <option value="1">1MT</option>
+    <option value="2">1MO</option>
+    <option value="3">1MH</option>
+    <option value="4">1MG/1ND</option>
+    <option value="5">1DT-1</option>
+    <option value="6">1DT-2</option>
+    <option value="7">1ET</option>
+    <option value="8">1GR</option>
+    <option value="9">1KL</option>
+    <option value="10">1EP</option>
+    <option value="11">1VP</option>
+    <option value="12">1ID</option>
+    <option value="13">1VD</option>
+    <option value="14">1VO</option>
+    <option value="15">1MD-1</option>
+    <option value="16">1MD-2</option>
+    <option value="17">2MT</option>
+    <option value="18">2MO</option>
+    <option value="19">2MH</option>
+    <option value="20">2MG</option>
+    <option value="21">2DT</option>
+    <option value="22">2ET</option>
+    <option value="23">2GR</option>
+    <option value="24">2KL</option>
+    <option value="25">2EP-1</option>
+    <option value="26">2EP-2</option>
+    <option value="27">2VP</option>
+    <option value="28">2VD</option>
+    <option value="29">2VO</option>
+    <option value="30">2MD</option>
+    <option value="31">3MT</option>
+    <option value="32">3MO</option>
+    <option value="33">3MH</option>
+    <option value="34">3MG</option>
+    <option value="35">3ND</option>
+    <option value="36">3DT</option>
+    <option value="37">3ET</option>
+    <option value="38">3GR</option>
+    <option value="39">3KL</option>
+    <option value="40">3EP</option>
+    <option value="41">3VP</option>
+    <option value="42">3ID</option>
+    <option value="43">3RD</option>
+    <option value="44">3MD</option>
+    <option value="45">3VO</option>
+    <option value="46">4MT</option>
+    <option value="47">4MO</option>
+    <option value="48">4MH</option>
+    <option value="49">4MG</option>
+    <option value="50">4ND</option>
+    <option value="51">4DT</option>
+    <option value="52">4ET</option>
+    <option value="53">4GR</option>
+    <option value="54">4KL</option>
+    <option value="55">4EP</option>
+    <option value="56">4VP</option>
+    <option value="57">4ID</option>
+    <option value="58">4RD</option>
+    <option value="59">4MD</option>
+    <option value="60">4AD</option>
+    <option value="61">4VO</option>
+    <option value="62">1MOv</option>
+    <option value="63">1DTv</option>
+    <option value="64">2MOv</option>
+    <option value="65">2DTv</option>
+  </select>
+</div>
 
-
-</select>
-<button onclick="imgcreator()">Ielādēt</button>
-<img id=test center src="none">
-<p>Reinis Gunārs Mednis 2017 mednis.id.lv</p>
-<p>Šī lapa ir domāta kā papildinājums parastajam <a href="http://www.ovt.lv/stundas/stundu_saraksts/index.html">OVT stundu sarakstam</a>, vienmēr pārbaudiet to. Es neesmu atbildīgs par jebkādām problēmām ko šī lapa var radīt.</p> 
+<img id=table class="main" src="none">
+<!-- Disclaimer -->
+<h1>Reinis Gunārs Mednis 2017 mednis.id.lv</h1>
+<p>Šī lapa ir domāta kā papildinājums parastajam <a href="http://www.ovt.lv/stundas/stundu_saraksts/index.html">OVT stundu sarakstam</a>, vienmēr pārbaudiet to.</p>
+<p> Es neesmu atbildīgs par jebkādām problēmām ko šī lapa var radīt.</p> 
+<!-- Load main image script -->
 <script>
 function imgcreator(){
 	var e = document.getElementById("ddlViewBy");
 	var img = e.options[e.selectedIndex].value;
 		if (img !=null) {
-			document.getElementById("test").src =
+			document.getElementById("table").src =
 			"https://raw.githubusercontent.com/RMednis/OVTDMP/master/timetables/" + img + ".png";
 			}
 		}
 </script>
+
+</body>
