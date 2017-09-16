@@ -7,6 +7,7 @@
 <body>
 <div class="pure-css-select-style theme-default">
   <select id="ddlViewBy" onchange="imgcreator()">
+    <option hidden value="0">Nospied lai izvēlētos kursu...</option>
     <option value="1">1MT</option>
     <option value="2">1MO</option>
     <option value="3">1MH</option>
@@ -79,6 +80,7 @@
 <!-- Disclaimer -->
 <h1>Reinis Gunārs Mednis 2017 mednis.id.lv</h1>
 <p>Šī lapa ir domāta kā papildinājums parastajam <a href="http://www.ovt.lv/stundas/stundu_saraksts/index.html">OVT stundu sarakstam</a>, vienmēr pārbaudiet to.</p>
+<p>Stundu saraksta pereizība <b>nav garantēta!</b></p>
 <p> Es neesmu atbildīgs par jebkādām problēmām ko šī lapa var radīt.</p> 
 <!-- Load main image script -->
 <script>
@@ -89,6 +91,9 @@ function imgcreator(){
 			document.getElementById("table").src =
 			"https://raw.githubusercontent.com/RMednis/OVTDMP/master/timetables/" + img + ".png";
 			}
+    else
+      document.getElementById("table").src = 
+      "https://raw.githubusercontent.com/RMednis/OVTDMP/master/"
 		}
 </script>
 
