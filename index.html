@@ -4,10 +4,12 @@
     <link rel="stylesheet" type="text/css" href="style.css">
     <link rel="stylesheet" href="pure-css-select-style.css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="utf-8">
+
 </head>
 <body>
 <div class="pure-css-select-style theme-default">
-  <select id="ddlViewBy" onchange="imgcreator()">
+  <select id="timetableselect" onchange="imgcreator()">
     <option hidden value="0">Nospied lai izvēlētos kursu...</option>
     <option value="1">1MT</option>
     <option value="2">1MO</option>
@@ -82,11 +84,11 @@
 <h1>Reinis Gunārs Mednis 2017 mednis.id.lv</h1>
 <p>Šī lapa ir domāta kā papildinājums parastajam <a href="http://www.ovt.lv/stundas/stundu_saraksts/index.html">OVT stundu sarakstam</a>, vienmēr pārbaudiet to.</p>
 <p>Stundu saraksta pereizība <b>nav garantēta!</b></p>
-<p> Es neesmu atbildīgs par jebkādām problēmām ko šī lapa var radīt.</p> 
+<p> Es neesmu atbildīgs par jebkādām problēmām ko šī lapa var radīt. <b>Izmantojiet to uz paša atbildību!</b></p> 
 <!-- Load main image script -->
 <script>
 function imgcreator(){
-	var e = document.getElementById("ddlViewBy");
+	var e = document.getElementById("timetableselect");
 	var img = e.options[e.selectedIndex].value;
 		if (img !=null) {
 			document.getElementById("table").src =
