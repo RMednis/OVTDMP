@@ -5,7 +5,7 @@
     <link rel="stylesheet" href="pure-css-select-style.css"> <!-- Yes, we do load an additional stylesheet just for the select menu -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- It's responsive! -->
     <meta charset="utf-8"> <!-- Firefox fails to display characters correctly without this -->
-    <body onload="javascript:imgcreator()"> <!-- Calls imgcreator() to load initial alert image -->
+    <body onload="javascript:imgcreator();"> <!-- Calls imgcreator to load initial alert image -->
 </head>
 <body>
 <div class="pure-css-select-style theme-default">
@@ -85,22 +85,53 @@
 <p>Šī lapa ir domāta kā papildinājums parastajam <a href="http://www.ovt.lv/stundas/stundu_saraksts/index.html">OVT stundu sarakstam</a>, vienmēr pārbaudiet to.</p>
 <p>Stundu saraksta pereizība <b>nav garantēta!</b></p>
 <p> Es neesmu atbildīgs par jebkādām problēmām ko šī lapa var radīt. <b>Izmantojiet to uz paša atbildību!</b></p> 
-<!-- Scripts... Beacause i'm too lazy to make them into their own file -->
+<!-- Scripts... Beacause i'm too lazy to make them into their own file... I really should... -->
 <!-- Load main image script -->
 <script>
 function imgcreator(){
 	// This thing converts the select option id's into actual URL's
   var e = document.getElementById("timetableselect");
-	var img = e.options[e.selectedIndex].value;
-		if (img !=null) {
+	var img = e.options[e.selectedIndex].value; // Gets the selected value from the dropdown
+  var kurss = getCookie("kurss"); // Retrieves data from cookies
+    if (img !== 0) {
 			document.getElementById("table").src =
 			"https://raw.githubusercontent.com/RMednis/OVTDMP/master/timetables/" + img + ".png";
-			}
-      // This is apperently needed since people seem to ignore the top bar....
-    if (img ==0) {
-      document.getElementById("table").src = "https://raw.githubusercontent.com/RMednis/OVTDMP/master/Alert.png";
-      } 
+      setCookie("kurss",img,"14"); // Loads image if selected from dropdown
+      }
+    if (img == 0) { // Checks to make sure you haven't selected anything else!
+        if (kurss !==0) {
+          document.getElementById("table").src = "https://raw.githubusercontent.com/RMednis/OVTDMP/master/timetables/" + kurss +".png"; // Loads image if stored in cookies 
+          setCookie("kurss",kurss,"14")
+       }
+        if (kurss == 0) {
+           document.getElementById("table").src = "https://raw.githubusercontent.com/RMednis/OVTDMP/master/Alert.png"; // This is apperently needed since people seem to ignore the top bar.... Retrieves an explination image on first run (Or after 2 weeks of not visiting)
+        } 
+      }
     }
+</script>
+<script type="text/javascript">
+  // Yumm... Cookies! But seriosly this thing stores and retrives the selected class to/from a cookie file!
+  function setCookie(cname, cvalue, exdays) { // Self explanitory... Sets cookie file...
+    var d = new Date();
+    d.setTime(d.getTime() + (exdays*24*60*60*1000));
+    var expires = "expires="+ d.toUTCString();
+    document.cookie = cname + "=" + cvalue + ";" + expires + ";path=/";
+}
+  function getCookie(cname) { // Also self explanitory... Pulls value from cookie file...
+    var name = cname + "=";
+    var decodedCookie = decodeURIComponent(document.cookie);
+    var ca = decodedCookie.split(';');
+    for(var i = 0; i <ca.length; i++) {
+        var c = ca[i];
+        while (c.charAt(0) == ' ') {
+            c = c.substring(1);
+        }
+        if (c.indexOf(name) == 0) {
+            return c.substring(name.length, c.length);
+        }
+    }
+    return "";
+}
 </script>
 <!-- That's all folks! -->
 </body>
