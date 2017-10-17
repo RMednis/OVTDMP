@@ -6,6 +6,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- It's responsive! -->
     <meta charset="utf-8"> <!-- Firefox fails to display characters correctly without this -->
     <body onload="javascript:imgcreator();"> <!-- Calls imgcreator to load initial alert image -->
+<!-- Favicons -->
+    <link rel="icon" type="image/png" sizes="192x192"  href="https://mednis.id.lv/android-icon-192x192.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="https://mednis.id.lv/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="https://mednis.id.lv/favicon-96x96.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="https://mednis.id.lv/favicon-16x16.png">
 </head>
 <body>
 <div class="pure-css-select-style theme-default">
@@ -104,7 +109,7 @@ function imgcreator(){
           setCookie("kurss",kurss,"14")
        }
         if (kurss == 0) {
-           document.getElementById("table").src = "https://mednis.id.lv/OVTDMP/Alert.png"; // This is apperently needed since people seem to ignore the top bar.... Retrieves an explination image on first run (Or after 2 weeks of not visiting)
+           document.getElementById("table").src = "https://mednis.id.lv/OVTDMP/Alert.png"; // This is apperently needed since people seem to ignore the top bar.... Retrieves an explination image on first run (or after 2 weeks of not visiting)
         } 
       }
     }
