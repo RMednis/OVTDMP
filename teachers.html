@@ -1,0 +1,212 @@
+<html>
+<head>
+  <title> OVT Stundu Saraksts </title>
+    
+    <!-- Hello, looks like you wanted see what's happening under the hood, this is a bit hacked together, but it works! -->
+    
+    <link rel="stylesheet" type="text/css" href="style.css"> <!-- The main css file -->
+    <link rel="stylesheet" href="pure-css-select-style.css"> <!-- Yes, we do load an additional stylesheet just for the select menu -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- It's responsive! -->
+    
+    <!-- Meta tags for our robotic friends -->
+    <meta name="description" content="Neoficiāls Ogres Valsts Tehnikuma (OVT) stundu saraksts skolotājiem, vēl atrodas BETA stadijā. Izmantojiet šo sarakstu uz paša atbildību, tas ir domāts kā papildinājums parastajam OVT stundu sarakstam!">
+    <meta charset="utf-8"> <!-- Firefox fails to display characters correctly without this -->
+    
+    <!-- Onload JS -->
+    <body onload="javascript:imgcreator();"> <!-- Calls imgcreator to load initial alert image -->
+    
+    <!-- Favicons -->
+    <link rel="icon" type="image/png" sizes="192x192"  href="https://mednis.id.lv/android-icon-192x192.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="https://mednis.id.lv/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="https://mednis.id.lv/favicon-96x96.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="https://mednis.id.lv/favicon-16x16.png">
+</head>
+
+<body>
+<!-- The main dropdown -->
+<div class="pure-css-select-style theme-default">
+  <select id="timetableselect" onchange="imgcreator()">
+    <option hidden value="0">Nospied lai izvēlētos pasniedzēju... (Sakārtots pēc uzvārdiem)</option> <!-- People seem to ignore this -->
+    <option value="1">Āboliņa Dace</option>
+    <option value="2">Āmane Gunta</option>
+    <option value="3">Apsītis Indulis</option>
+    <option value="4">Astra Baiba</option>
+    <option value="5">Atte Iveta</option>
+    <option value="6">Auziņa Armanda</option>
+    <option value="7">Balodis Raivis</option>
+    <option value="8">Balode Ruta</option>
+    <option value="9">Barisa Ingrīda</option>
+    <option value="10">Bāra Zinaida</option>
+    <option value="11">Bataraga Lilita</option>
+    <option value="12">Baltruka Ilze</option>
+    <option value="13">Bičols Arturs</option>
+    <option value="14">Brūveris Jānis</option>
+    <option value="15">Buša Solvita</option>
+    <option value="16">Ceiruls Viktors</option>
+    <option value="17">Cīrulis Arturs</option>
+    <option value="18">Cihovska Baiba</option>
+    <option value="19">Davidāns Māris</option>
+    <option value="20">Dimdiņa Rūta</option>
+    <option value="21">Dreimane Maruta</option>
+    <option value="22">Dzirkale Ilze</option>
+    <option value="23">Dreimanis Dāvis</option>
+    <option value="24">Ezerietis Toms</option>
+    <option value="25">Graba Irēna</option>
+    <option value="27">Graudumniece Līva</option>
+    <option value="28">Grīntāle Laima</option>
+    <option value="29">Gulāns Roberts</option>
+    <option value="30">Griķīte Liene</option>
+    <option value="31">Grauduma Anita</option>
+    <option value="32">Herliņš Oskars</option>
+    <option value="33">Ieraga Inga</option>
+    <option value="34">Ivanova Viktorija</option>
+    <option value="35">Kalnaģeidāne Gita</option>
+    <option value="36">Keivomeģe Kristīne</option>
+    <option value="37">Kalniņš Lauris</option>
+    <option value="38">Kaļeiņikova Velga</option>
+    <option value="39">Kaupuža Inese</option>
+    <option value="40">Kincis Zigurds</option>
+    <option value="41">Korsīte Daina</option>
+    <option value="42">Krodziniece Solvita</option>
+    <option value="43">Ķesteris Ivo</option>
+    <option value="44">Laganovskis Aivars</option>
+    <option value="45">Lapiņš Armands</option>
+    <option value="46">Lišmane-Ozoliņa Inga</option>
+    <option value="47">Lukašenoka Aļona</option>
+    <option value="48">Meldere Lilita</option>
+    <option value="49">Miezis Klāvs</option>
+    <option value="50">Neško Linda</option>
+    <option value="90">Oboznaja Vineta</option>
+    <option value="91">Orbidāne Inese</option>
+    <option value="92">Ozola Violeta</option>
+    <option value="93">Ozolniece Viktorija</option>
+    <option value="94">Pakalna Anita</option>
+    <option value="95">Pastare Aiga</option>
+    <option value="96">Pastare Linda</option>
+    <option value="97">Pinka Aija</option>
+    <option value="98">Pučs Armands</option>
+    <option value="99">Priede Kristaps</option>
+    <option value="100">Priede Ojārs</option>
+    <option value="101">Rusiņš Rūdolfs</option>
+    <option value="102">Ranga Kārlis</option>
+    <option value="103">Reča Daiga</option>
+    <option value="104">Rišē Vladimirs</option>
+    <option value="105">Rumpētere Ineta</option>
+    <option value="106">Runča Dace</option>
+    <option value="107">Rūtenberga Ligita</option>
+    <option value="108">Santa Elizabete</option>
+    <option value="109">Seidars Arnolds</option>
+    <option value="110">Skabarde Tatjana</option>
+    <option value="111">Strazdiņa Māra</option>
+    <option value="112">Strūbergs Aigars</option>
+    <option value="113">Stumpe Evita</option>
+    <option value="114">Stikute Anita</option>
+    <option value="115">Šnokāne Ingūna</option>
+    <option value="116">Šulca Rasa</option>
+    <option value="117">Ševšeļova Viktorija</option>
+    <option value="118">Šidlovska Liāna</option>
+    <option value="119">Šūpola Ieva</option>
+    <option value="120">Tontegode Rihards</option>
+    <option value="121">Usins Dmitrijs</option>
+    <option value="122">Visockis Oļegs</option>
+    <option value="123">Vīksna Vija</option>
+    <option value="124">Vilcāne Gizela</option>
+    <option value="125">Žilinska Iveta</option>
+    <option value="126">VAKANCE</option>
+    <option value="127">Dzenis Jānis</option>
+  </select>
+</div>
+
+<!-- The actual timetable image element -->
+<img id=table class="main" src="none">
+
+<!-- Place to put additional text, that appears obove the disclaimer -->
+<h1 style="color:red;">Uzmanību: No 14 - 17 Jūnijam notiks serveru uzturēšanas un atjaunošanas darbi.</h1>
+
+<!-- Disclaimer -->
+<h1>Reinis Gunārs Mednis 2018 mednis.id.lv</h1>
+<p>Šī lapa ir domāta kā papildinājums parastajam <a href="http://www.ovt.lv/stundas/stundu_saraksts/index.html">OVT stundu sarakstam</a>, vienmēr pārbaudiet to.</p>
+<p>Stundu saraksta pareizība <b>nav garantēta!</b></p>
+<p> Es neesmu atbildīgs par jebkādām problēmām ko šī lapa var radīt. <b>Izmantojiet to uz paša atbildību!</b></p> 
+<a href='https://mednis.id.lv/OVTDMP/'><button class="button">Audzēkņu stundu saraksts</button></a>
+
+<!-- Scripts -->
+
+<!-- Load main image script -->
+<script>
+// This thing converts the select option id's into actual URL's
+function imgcreator(){
+  
+  var e = document.getElementById("timetableselect"); // This is the dropdown menu element
+  var img = e.options[e.selectedIndex].value; // Gets the selected value from the dropdown, converts it into a number
+  var skolotajs = getCookie("skolotajs"); // Retrieves the timetable value from cookies (if there is one)
+  
+    if (img !== 0) {
+        // Looks like something has been selected from the dropdown!
+        
+        // If the selected teacher is in the first folder (aka the assigned value is less than the last frame of the first folder)
+        if (img <=89 ) {
+            document.getElementById("table").src =
+            "https://mednis.id.lv/OVTDMP/teacher_tables/1/" + img + ".png";
+        }
+
+        // If the selected teacher is in the first folder (aka the assigned value is more than the last frame of the first folder, and less than the second)
+        if (img > 89 && img < 178) {
+            document.getElementById("table").src =
+            "https://mednis.id.lv/OVTDMP/teacher_tables/2/" + (img - 89) + ".png"; // It is important to remove the max frames from this value!
+        }
+      setCookie("skolotajs",img,"14"); // Loads image if selected from dropdown
+      }
+    if (img == 0) { // This usually runs on the page load!
+        
+        // If there is already a timetable id saved in the cookies
+        if (skolotajs !==0) {
+            
+            // If the teacher is in the first folder (aka the assigned number is less than 89)
+            if (skolotajs <= 89) {
+          document.getElementById("table").src = "https://mednis.id.lv/OVTDMP/teacher_tables/1/" + skolotajs +".png"; // Loads image is in 1st folder ans is stored in cookies 
+            
+            // If the teacher is in the second folder (aka the assigned number is more than 89)
+            if (skolotajs > 89 && skolotajs < 178) {
+                document.getElementById("table").src = "https://mednis.id.lv/OVTDMP/teacher_tables/2/" + skolotajs +".png"; // Loads image if teacher is in 2nd folder and is stored in cookies 
+            }
+
+          setCookie("skolotajs",skolotajs,"14")
+       }
+
+        // If the stored image is zero, and you haven't selected anything in the dropdown! (This is probably the first visit!)
+        if (skolotajs == 0) {
+           document.getElementById("table").src = "https://mednis.id.lv/OVTDMP/Alert.png"; // This is apperently needed since people seem to ignore the top bar.... Retrieves an explination image on first run (or after 2 weeks of not visiting)
+        } 
+      }
+    }
+}
+</script>
+
+<!-- Cookie handling scripts -->
+<script type="text/javascript">
+  // Yumm... Cookies! But seriosly this thing stores and retrives the selected teacher to/from a cookie file!
+  function setCookie(cname, cvalue, exdays) { // Self explanitory... Sets cookie file...
+    var d = new Date(); // Grabs te date
+    d.setTime(d.getTime() + (exdays*24*60*60*1000)); // Converts it into ms
+    var expires = "expires="+ d.toUTCString(); 
+    document.cookie = cname + "=" + cvalue + ";" + expires + ";path=/"; // Sets te actual cookie!
+}
+  function getCookie(cname) { // Also self explanitory... Pulls value from cookie file...
+    var name = cname + "=";
+    var decodedCookie = decodeURIComponent(document.cookie);
+    var ca = decodedCookie.split(';');
+    for(var i = 0; i <ca.length; i++) {
+        var c = ca[i];
+        while (c.charAt(0) == ' ') {
+            c = c.substring(1);
+        }
+        if (c.indexOf(name) == 0) {
+            return c.substring(name.length, c.length);
+        }
+    }
+    return "";
+}
+</script>
+<!-- That's all folks! -->
+</body>
