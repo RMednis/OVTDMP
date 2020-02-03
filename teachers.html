@@ -26,7 +26,7 @@
 </select>
 </div>
 <!-- The actual timetable image element -->
-<img class="main" id="table" src="none"/>
+<img class="main" id="table" src="https://mednis.id.lv/OVTDMP/Alert.png"/>
 <!-- Place to put additional text, that appears obove the disclaimer -->
 <!-- Disclaimer -->
 <h1>Reinis Gunārs Mednis 2019 mednis.id.lv</h1>
@@ -41,7 +41,7 @@
 function imgcreator(){
   
   var e = document.getElementById("timetableselect"); // This is the dropdown menu element
-  var img = e.options[e.selectedIndex].value; // Gets the selected value from the dropdown, converts it into a number
+  var img = 0; // Gets the selected value from the dropdown, converts it into a number
   var skolotajs = 0; //getCookie("skolotajs"); // Retrieves the timetable value from cookies (if there is one)
   
     if (img !== 0) {
@@ -78,7 +78,7 @@ function imgcreator(){
        }
 
         // If the stored image is zero, and you haven't selected anything in the dropdown! (This is probably the first visit!)
-        if (skolotajs == 0) {
+        else {
            document.getElementById("table").src = "https://mednis.id.lv/OVTDMP/Alert.png"; // This is apperently needed since people seem to ignore the top bar.... Retrieves an explination image on first run (or after 2 weeks of not visiting)
         } 
       }
