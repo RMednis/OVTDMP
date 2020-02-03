@@ -16,95 +16,31 @@
 <body>
 <div class="pure-css-select-style theme-default">
   <select id="timetableselect" onchange="imgcreator()">
-    <option hidden value="0">Nospied lai izvēlētos kursu...</option> <!-- People seem to ignore this -->
-    <option value="1">1MT-1</option>
-    <option value="2">1MT-2</option>
-    <option value="3">1MO-1</option>
-    <option value="4">1MO-2</option>
-    <option value="5">1SM</option>
-    <option value="6">1MG</option>
-    <option value="7">1ND</option>
-    <option value="8">1DT-1</option>
-    <option value="9">1DT-2</option>
-    <option value="10">1ET</option>
-    <option value="11">1GR</option>
-    <option value="12">1VP</option>
-    <option value="13">1EP</option>
-    <option value="14">1MD-1</option>
-    <option value="15">1MD-2</option>
-    <option value="16">1RD</option>
-    <option value="17">1ID</option>
-    <option value="18">1VD</option>
-    <option value="19">1VO-1</option>
-    <option value="20">1VO-2</option>
-    <option value="21">2MT</option>
-    <option value="22">2MO</option>
-    <option value="23">2MH</option>
-    <option value="24">2MG</option>
-    <option value="25">2ND</option>
-    <option value="26">2DT-1</option>
-    <option value="27">2DT-2</option>
-    <option value="28">2ET</option>
-    <option value="29">2KL</option>
-    <option value="30">2GR</option>
-    <option value="31">2VP</option>
-    <option value="32">2EP</option>
-    <option value="33">2MD-1</option>
-    <option value="34">2MD-2</option>
-    <option value="35">2RD</option>
-    <option value="36">2ID</option>
-    <option value="37">2VD</option>
-    <option value="38">2VO</option>
-    <option value="39">3MT</option>
-    <option value="40">3MO</option>
-    <option value="41">3MH</option>
-    <option value="42">3MG</option>
-    <option value="43">3ND</option>
-    <option value="44">3DT-1</option>
-    <option value="45">3DT-2</option>
-    <option value="46">3ET</option>
-    <option value="47">3KL</option>
-    <option value="48">3GR</option>
-    <option value="49">3VP</option>
-    <option value="50">3EP</option>
-    <option value="51">3MD-1</option>
-    <option value="52">3MD-2</option>
-    <option value="53">3ID</option>
-    <option value="54">3VD</option>
-    <option value="55">3VO</option>
-    <option value="56">4MT</option>
-    <option value="57">4MO</option>
-    <option value="58">4MH</option>
-    <option value="59">4MG</option>
-    <option value="60">4ND</option>
-    <option value="61">4DT</option>
-    <option value="62">4ET</option>
-    <option value="63">4KL</option>
-    <option value="64">4GR</option>
-    <option value="65">4VP</option>
-    <option value="66">4EP</option>
-    <option value="67">4MD</option>
-    <option value="68">4VD</option>
-    <option value="69">4VO</option>
-    <option value="70">1MOv</option>
+    <option hidden value="0">Rest In Peace, TimeTableDump!</option> <!-- People seem to ignore this -->
   </select>
 </div>
 
+
 <img id=table class="main" src="none">
+<h3></h3>
 <!-- Disclaimer -->
-<h1>Reinis Gunārs Mednis 2019 mednis.id.lv</h1>
-<p>Šī lapa ir domāta kā papildinājums parastajam <a href="http://www.ovt.lv/stundas/stundu_saraksts/index.html">OVT stundu sarakstam</a>, vienmēr pārbaudiet to.</p>
-<p>Stundu saraksta pareizība <b>nav garantēta!</b></p>
+<h1>Reinis Gunārs Mednis 2020 mednis.id.lv</h1>
+<p>Šī lapa bija domāta kā papildinājums parastajam <a href="http://www.ovt.lv/stundas/stundu_saraksts/index.html">OVT stundu sarakstam</a>, vienmēr pārbaudiet to.</p>
+<p>Stundu saraksta pareizība <b>nav garantēta...</b></p>
 <p> Es neesmu atbildīgs par jebkādām problēmām ko šī lapa var radīt. <b>Izmantojiet to uz paša atbildību!</b></p> 
 <a href='https://mednis.id.lv/OVTDMP/teachers'><button class="button">Pasniedzēju stundu saraksts</button></a>
 <!-- Scripts -->
 <!-- Load main image script -->
 <script>
 function imgcreator(){
+
+	console.log('Rest in peace TimeTableDump, and thank you for the 2,5 awesome years!');
+	console.log("They say an end is just the beggining of something greater... let's see...");
+
 	// This thing converts the select option id's into actual URL's
   var e = document.getElementById("timetableselect");
 	var img = e.options[e.selectedIndex].value; // Gets the selected value from the dropdown
-  var kurss = getCookie("kurss"); // Retrieves data from cookies
+  var kurss = 0; //getCookie("kurss"); // Retrieves data from cookies
     if (img !== 0) {
 			document.getElementById("table").src =
 			"https://mednis.id.lv/OVTDMP/timetables/" + img + ".png";
